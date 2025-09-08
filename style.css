@@ -1,0 +1,142 @@
+/* --------------------------
+   Recipe Finder — light theme
+   -------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+:root{
+  --accent: #ff914d;   /* warm orange */
+  --accent2: #4CAF50;  /* fresh green */
+  --cream: #fffdf8;    /* page background */
+  --card: #ffffff;     /* card background */
+  --muted: #6b6b6b;
+  --shadow: rgba(19,19,20,0.06);
+}
+
+/* Base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--cream);
+  color: #222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* NAVBAR */
+.navbar{
+  background: var(--card) !important;
+  box-shadow: 0 6px 20px var(--shadow);
+  border-radius: 0 0 12px 12px;
+  padding: 10px 18px;
+}
+.navbar-brand{
+  color: var(--accent) !important;
+  font-weight:800;
+  font-size:1.25rem;
+  letter-spacing:0.6px;
+}
+.nav-link{
+  color:#444 !important;
+  font-weight:600;
+  margin-left:8px;
+}
+.nav-link:hover{ color: var(--accent) !important; }
+
+/* HERO WRAPPER (matches container.d-flex present in HTML) */
+.hero-wrapper{
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.95));
+  border-radius: 16px;
+  padding: 36px;
+  margin-top: 30px;
+  box-shadow: 0 18px 40px rgba(20,20,20,0.06);
+  gap: 32px;
+  align-items:center;
+}
+
+/* LEFT: HERO CONTENT */
+.hero-heading{ flex:1 1 560px; }
+.hero-heading h1{
+  margin:0 0 8px 0;
+  font-size:2.6rem;
+  color:var(--accent);
+  font-weight:800;
+  letter-spacing:0.4px;
+}
+.hero-heading h3{
+  margin:0 0 14px 0;
+  color:var(--accent2);
+  font-size:1.2rem;
+  font-weight:600;
+}
+.hero-heading p{
+  margin:0 0 18px 0;
+  color:var(--muted);
+  max-width:60ch;
+}
+
+/* CTA BUTTONS */
+.primary-cta{
+  background: linear-gradient(90deg, var(--accent), #ff6b3b);
+  color:white;
+  border:none;
+  padding:12px 20px;
+  border-radius:999px;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow: 0 8px 30px rgba(255,145,77,0.12);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.primary-cta:hover{ transform: translateY(-4px); box-shadow: 0 14px 40px rgba(76,175,80,0.12); }
+
+.ghost-cta{
+  background: transparent;
+  border:1px solid rgba(0,0,0,0.06);
+  padding:12px 20px;
+  border-radius:999px;
+  font-weight:700;
+  color:#333;
+  margin-left:10px;
+}
+.ghost-cta:hover{ background: rgba(0,0,0,0.02); transform: translateY(-2px); }
+
+/* RIGHT: HERO IMAGE / CAROUSEL */
+.hero-img{
+  flex:0 0 420px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:420px;
+}
+.hero-img .carousel{
+  width:100%;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.hero-img .carousel-img{
+  height: 320px;
+  object-fit: cover;
+  width:100%;
+  display:block;
+}
+
+/* small indicator & control color tweaks for hero carousel */
+.hero-img .carousel-indicators [data-bs-target]{
+  background-color: rgba(0,0,0,0.35);
+}
+.hero-img .carousel-control-prev-icon,
+.hero-img .carousel-control-next-icon{
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.35));
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px){
+  .hero-wrapper{ padding: 22px; }
+  .hero-wrapper{ flex-direction: column; text-align: center; gap:18px; }
+  .hero-img{ width:80%; margin:0 auto; }
+  .hero-img .carousel-img{ height: 260px; }
+  .hero-heading h1{ font-size:2rem; }
+}
