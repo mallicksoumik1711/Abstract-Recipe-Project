@@ -2,50 +2,119 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Finder</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <style>
+    /* Loader Styles */
+    #loader {
+      height: 100%;
+      width: 100%;
+      background-color: black;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      transition: top 0.7s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    #loader h1 {
+      color: transparent;
+      font-size: 10vw;
+      background: linear-gradient(orange, red);
+      -webkit-background-clip: text;
+      opacity: 0;
+      animation: load 1.1s linear forwards;
+    }
+
+    #loader h1:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    #loader h1:nth-child(2) {
+      animation-delay: 1.2s;
+    }
+
+    #loader h1:nth-child(3) {
+      animation-delay: 2.4s;
+    }
+
+    @keyframes load {
+      0% {
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
 
-<body class="bg-dark">
-    <!-- Soumik's workspace navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- Soumik's workspace navbar end-->
+<body class="bg-dark text-light">
 
-    <!-- Soumik's workspace hero section -->
-    <div class="container d-flex py-5 align-items-center text-light">
-        <div class="hero-heading">
-            <h1>Hero heading</h1>
-            <h3>Hero sub heading</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias aspernatur animi nemo praesentium saepe. Quas enim dolorem similique optio nostrum modi, expedita porro ratione repellendus, quis aut assumenda ea sed adipisci voluptatem velit. Quia facere optio similique veritatis? Aspernatur, optio porro ducimus iure deserunt expedita!</p>
-            <button id="show-all-recipes">Show Recipes</button>
-            <button id="add-new-recipe">Add Recipe</button>
+  <!-- Loader -->
+  <div id="loader">
+    <h1>Happy</h1>
+    <h1>Birthday</h1>
+    <h1>Vyashnavi </h1>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Pricing</a>
         </div>
-        <div class="hero-img">
-            <img src="https://cdni.iconscout.com/illustration/premium/thumb/woman-making-pizza-illustration-svg-png-download-11934908.png" alt="">
-        </div>
+      </div>
     </div>
-    <!-- Soumik's workspace hero section end -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-</body>
+  </nav>
 
+  <!-- Hero Section -->
+  <div class="container d-flex py-5 align-items-center text-light">
+    <div class="hero-heading">
+      <h1>Hero heading</h1>
+      <h3>Hero sub heading</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias aspernatur animi nemo praesentium saepe. Quas
+        enim dolorem similique optio nostrum modi, expedita porro ratione repellendus, quis aut assumenda ea sed adipisci voluptatem velit.</p>
+      <button id="show-all-recipes">Show Recipes</button>
+      <button id="add-new-recipe">Add Recipe</button>
+    </div>
+    <div class="hero-img">
+      <img src="https://cdni.iconscout.com/illustration/premium/thumb/woman-making-pizza-illustration-svg-png-download-11934908.png"
+        alt="">
+    </div>
+  </div>
+
+  <!-- Bootstrap Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  <!-- Loader Script -->
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("loader").style.top = "-100%";
+      }, 4000); // wait for animation to finish
+    });
+  </script>
+
+</body>
 </html>

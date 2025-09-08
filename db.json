@@ -1,0 +1,22 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "name": "Pizza",
+      "ingredients": "Flour, Cheese, Tomato",
+      "time": "30 mins"
+    },
+    {
+      "id": "2",
+      "name": "Pasta",
+      "ingredients": "Pasta, Tomato Sauce",
+      "time": "20 mins"
+    },
+    {
+      "id": "98ff",
+      "name": "4",
+      "ingredients": "chilly toast ",
+      "time": "garlic"
+    }
+  ]
+}
