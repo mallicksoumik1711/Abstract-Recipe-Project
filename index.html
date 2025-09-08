@@ -2,50 +2,106 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Finder</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  
+  <!-- [Rishi] Custom animations -->
+  <style>
+    /* [Rishi] Fade + slide up animation */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* [Rishi] Zoom-in animation */
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* [Rishi] Apply animations */
+    .hero-text {
+      animation: fadeUp 1s ease-out forwards;
+    }
+
+    .hero-img img {
+      animation: zoomIn 1.2s ease-out forwards;
+    }
+
+    /* [Rishi] Button hover animation */
+    .btn-animated {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-animated:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+    }
+  </style>
 </head>
 
-<body class="bg-dark">
-    <!-- Soumik's workspace navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- Soumik's workspace navbar end-->
+<body class="bg-dark text-light">
 
-    <!-- Soumik's workspace hero section -->
-    <div class="container d-flex py-5 align-items-center text-light">
-        <div class="hero-heading">
-            <h1>Hero heading</h1>
-            <h3>Hero sub heading</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias aspernatur animi nemo praesentium saepe. Quas enim dolorem similique optio nostrum modi, expedita porro ratione repellendus, quis aut assumenda ea sed adipisci voluptatem velit. Quia facere optio similique veritatis? Aspernatur, optio porro ducimus iure deserunt expedita!</p>
-            <button id="show-all-recipes">Show Recipes</button>
-            <button id="add-new-recipe">Add Recipe</button>
+  <!-- Soumik's workspace navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Recipe Finder</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Pricing</a>
         </div>
-        <div class="hero-img">
-            <img src="https://cdni.iconscout.com/illustration/premium/thumb/woman-making-pizza-illustration-svg-png-download-11934908.png" alt="">
-        </div>
+      </div>
     </div>
-    <!-- Soumik's workspace hero section end -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+  </nav>
+  <!-- Soumik's workspace navbar end-->
+
+  <!-- Soumik's workspace hero section -->
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <!-- [Rishi] Hero text column with animation -->
+      <div class="col-lg-6 mb-4 mb-lg-0 hero-text">
+        <h1 class="display-4 fw-bold">Discover Delicious Recipes</h1>
+        <h3 class="mb-3">Cook something amazing today</h3>
+        <p class="lead mb-4">Explore our wide collection of recipes curated just for you. Whether you're a beginner or a pro, 
+          there’s always something tasty waiting to be tried in your kitchen.</p>
+        <!-- [Rishi] Animated buttons -->
+        <div class="d-flex gap-3">
+          <button id="show-all-recipes" class="btn btn-primary btn-lg shadow-sm btn-animated">🍲 Show Recipes</button>
+          <button id="add-new-recipe" class="btn btn-outline-light btn-lg shadow-sm btn-animated">➕ Add Recipe</button>
+        </div>
+      </div>
+      <!-- [Rishi] Hero image with zoom animation -->
+      <div class="col-lg-6 text-center hero-img">
+        <img src="https://cdni.iconscout.com/illustration/premium/thumb/woman-making-pizza-illustration-svg-png-download-11934908.png"
+          alt="Cooking illustration" class="img-fluid rounded-4 shadow">
+      </div>
+    </div>
+  </div>
+  <!-- Soumik's workspace hero section end -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
