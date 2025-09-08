@@ -2,64 +2,23 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Recipe Finder</title>
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  
-  <!-- [Rishi] Custom animations -->
-  <style>
-    /* [Rishi] Fade + slide up animation */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
 
-    /* [Rishi] Zoom-in animation */
-    @keyframes zoomIn {
-      from {
-        opacity: 0;
-        transform: scale(0.9);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    /* [Rishi] Apply animations */
-    .hero-text {
-      animation: fadeUp 1s ease-out forwards;
-    }
-
-    .hero-img img {
-      animation: zoomIn 1.2s ease-out forwards;
-    }
-
-    /* [Rishi] Button hover animation */
-    .btn-animated {
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .btn-animated:hover {
-      transform: scale(1.08);
-      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
-    }
-  </style>
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-dark text-light">
-
-  <!-- Soumik's workspace navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Recipe Finder</a>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg border-bottom" data-bs-theme="light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">RecipeFinder ✨</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -73,35 +32,102 @@
       </div>
     </div>
   </nav>
-  <!-- Soumik's workspace navbar end-->
 
-  <!-- Soumik's workspace hero section -->
-  <div class="container py-5">
-    <div class="row align-items-center">
-      <!-- [Rishi] Hero text column with animation -->
-      <div class="col-lg-6 mb-4 mb-lg-0 hero-text">
-        <h1 class="display-4 fw-bold">Discover Delicious Recipes</h1>
-        <h3 class="mb-3">Cook something amazing today</h3>
-        <p class="lead mb-4">Explore our wide collection of recipes curated just for you. Whether you're a beginner or a pro, 
-          there’s always something tasty waiting to be tried in your kitchen.</p>
-        <!-- [Rishi] Animated buttons -->
-        <div class="d-flex gap-3">
-          <button id="show-all-recipes" class="btn btn-primary btn-lg shadow-sm btn-animated">🍲 Show Recipes</button>
-          <button id="add-new-recipe" class="btn btn-outline-light btn-lg shadow-sm btn-animated">➕ Add Recipe</button>
+  <div class="container d-flex py-5 align-items-center text-dark hero-wrapper">
+    <div class="hero-heading">
+      <h1>Find Your Recipe</h1>
+      <h3>Cook Smarter, Eat Better</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias aspernatur animi nemo praesentium saepe.
+        Quas enim dolorem similique optio nostrum modi, expedita porro ratione repellendus, quis aut assumenda ea sed
+        adipisci voluptatem velit.</p>
+      <button id="show-all-recipes" class="btn primary-cta">Show Recipes</button>
+      <button id="add-new-recipe" class="btn ghost-cta">Add Recipe</button>
+    </div>
+
+    <div class="hero-img">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5"></button>
         </div>
-      </div>
-      <!-- [Rishi] Hero image with zoom animation -->
-      <div class="col-lg-6 text-center hero-img">
-        <img src="https://cdni.iconscout.com/illustration/premium/thumb/woman-making-pizza-illustration-svg-png-download-11934908.png"
-          alt="Cooking illustration" class="img-fluid rounded-4 shadow">
+
+        <div class="carousel-inner">
+          <!-- Pizza -->
+          <div class="carousel-item active">
+            <img src="images/pizza.jpg" class="d-block w-100 carousel-img" alt="Pizza">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Quick Homemade Pizza</h5>
+              <p>An easy, family-friendly pizza you can make in 20 minutes.</p>
+            </div>
+          </div>
+
+          <!-- Salad -->
+          <div class="carousel-item">
+            <img src="images/salad.jpg" class="d-block w-100 carousel-img" alt="Salad">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Fresh & Crunchy Salads</h5>
+              <p>Bright salads packed with seasonal greens and crunchy toppings.</p>
+            </div>
+          </div>
+
+          <!-- Pasta -->
+          <div class="carousel-item">
+            <img src="images/pasta.jpg" class="d-block w-100 carousel-img" alt="Pasta">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Comforting Pasta Dishes</h5>
+              <p>Hearty pasta recipes for cozy weeknight dinners.</p>
+            </div>
+          </div>
+
+          <!-- Biryani -->
+          <div class="carousel-item">
+            <img src="images/biryani.jpg" class="d-block w-100 carousel-img" alt="Biryani">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Flavorful Biryani</h5>
+              <p>Fragrant rice layered with spices and tender meat or veggies.</p>
+            </div>
+          </div>
+
+          <!-- Pancakes -->
+          <div class="carousel-item">
+            <img src="images/pancakes.jpg" class="d-block w-100 carousel-img" alt="Pancakes">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Fluffy Pancakes</h5>
+              <p>Perfect breakfast pancakes with syrup and butter.</p>
+            </div>
+          </div>
+
+          <!-- Soup -->
+          <div class="carousel-item">
+            <img src="images/soup.jpg" class="d-block w-100 carousel-img" alt="Soup">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Healthy Soups</h5>
+              <p>Warm and nourishing soups for every season.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
   </div>
-  <!-- Soumik's workspace hero section end -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
