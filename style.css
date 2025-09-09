@@ -1,6 +1,4 @@
-/* --------------------------
-   Recipe Finder — light theme
-   -------------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
 
 :root{
@@ -45,7 +43,6 @@ body{
 }
 .nav-link:hover{ color: var(--accent) !important; }
 
-/* HERO WRAPPER (matches container.d-flex present in HTML) */
 .hero-wrapper{
   background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.95));
   border-radius: 16px;
@@ -56,7 +53,6 @@ body{
   align-items:center;
 }
 
-/* LEFT: HERO CONTENT */
 .hero-heading{ flex:1 1 560px; }
 .hero-heading h1{
   margin:0 0 8px 0;
@@ -102,7 +98,7 @@ body{
 }
 .ghost-cta:hover{ background: rgba(0,0,0,0.02); transform: translateY(-2px); }
 
-/* RIGHT: HERO IMAGE / CAROUSEL */
+/* CAROUSEL */
 .hero-img{
   flex:0 0 420px;
   display:flex;
@@ -123,7 +119,6 @@ body{
   display:block;
 }
 
-/* small indicator & control color tweaks for hero carousel */
 .hero-img .carousel-indicators [data-bs-target]{
   background-color: rgba(0,0,0,0.35);
 }
