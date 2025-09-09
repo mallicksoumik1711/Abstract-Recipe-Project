@@ -3,8 +3,8 @@ async function showRecipes() {
     let res = await fetch("http://localhost:3000/recipes");
     let recipes = await res.json();
 
-    // Build styled table with a "View" button
-   // Inside your tableHTML template
+    //  "View" button in table
+  
 let tableHTML = `
   <div class="card shadow-sm rounded-4 overflow-hidden">
     <div class="table-responsive">
@@ -46,7 +46,7 @@ let tableHTML = `
 
     document.getElementById("table-container").innerHTML = tableHTML;
 
-    // Add click listener to all "View" buttons
+    
     const buttons = document.querySelectorAll(".view-btn");
     buttons.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -54,7 +54,7 @@ let tableHTML = `
         const recipe = btn.dataset.recipe;
         const procedure = btn.dataset.procedure;
 
-        // Fill modal content
+       
         document.getElementById("recipeModalLabel").textContent = recipe;
         document.getElementById("recipeModalBody").innerHTML = `
           <p><strong>ID:</strong> ${id}</p>

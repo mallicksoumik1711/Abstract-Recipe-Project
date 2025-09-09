@@ -6,17 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Recipes</title>
 
-  <!-- Bootstrap CSS -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom stylesheet (same as homepage) -->
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-light text-dark">
 
     <style>
-        /* Recipe table styling */
+        
 #table-container .card {
   border-radius: 20px;
   overflow: hidden;
@@ -28,15 +28,15 @@
 }
 
 #table-container table tbody tr:hover {
-  background-color: #f8f9fa; /* subtle hover effect */
+  background-color: #f8f9fa; 
 }
 
     </style>
 
-  <!-- Navbar -->
+  
   <nav class="navbar navbar-expand-lg border-bottom" data-bs-theme="light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">RecipeFinder ✨</a>
+      <a class="navbar-brand" href="index.html">RecipeFinder </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -50,18 +50,18 @@
     </div>
   </nav>
 
-  <!-- Main content -->
+  
   <div class="container py-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
       <h1 class="fw-bold">All Recipes</h1>
       <a href="index.html" class="btn ghost-cta">Back</a>
     </div>
 
-    <!-- Recipes table container -->
+    
     <div id="table-container" class="table-responsive card shadow-sm p-3 rounded"></div>
   </div>
 
-  <!-- Modal for recipe details -->
+  
   <div class="modal fade" id="recipeModal" tabindex="-1" aria-labelledby="recipeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content rounded-4 shadow">
@@ -70,7 +70,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" id="recipeModalBody">
-          <!-- JS will fill details here -->
+         
         </div>
         <div class="modal-footer">
           <button type="button" class="btn ghost-cta" data-bs-dismiss="modal">Close</button>
@@ -79,7 +79,7 @@
     </div>
   </div>
 
-  <!-- Bootstrap JS -->
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script src="recipes.js" defer></script>
 </body>
