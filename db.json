@@ -3,17 +3,17 @@
     {
       "id": "1",
       "recipe": "Classic Margherita Pizza",
-      "procedure": "Preheat oven to 475°F (245°C). Roll out pizza dough on a floured surface. Spread tomato sauce evenly over the base, sprinkle shredded mozzarella cheese, and add fresh basil leaves. Drizzle with olive oil. Bake for 10-15 minutes until the crust is golden and cheese is bubbling. Slice and serve hot."
+      "procedure": "Preheat oven to 475°F (245°C). Roll out pizza dough on a floured surface. "
     },
     {
       "id": "2",
       "recipe": "Caesar Salad",
-      "procedure": "Chop romaine lettuce and place in a large salad bowl. Prepare dressing by mixing olive oil, lemon juice, garlic, Worcestershire sauce, Dijon mustard, anchovy paste, and parmesan cheese. Toss lettuce with dressing until evenly coated. Add croutons and extra parmesan on top. Serve immediately."
+      "procedure": "Chop romaine lettuce and place in a large salad bowl. "
     },
     {
       "id": "3",
       "recipe": "Spaghetti Carbonara",
-      "procedure": "Cook spaghetti in salted boiling water until al dente. While pasta cooks, fry pancetta until crisp. Beat eggs with grated Parmesan cheese in a bowl. Drain pasta and quickly toss with pancetta and egg mixture off heat to avoid scrambling. Season with black pepper and extra cheese. Serve warm."
+      "procedure": "Cook spaghetti in salted boiling water until al dente. "
     },
     {
       "id": "4",

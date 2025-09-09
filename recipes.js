@@ -23,7 +23,7 @@ let tableHTML = `
               (r) => `
               <tr>
                 <td>${r.id}</td>
-                <td class="fw-semibold text-truncate" style="max-width: 120px;">${r.recipe}</td>
+                <td class="fw-semibold text-truncate" style="max-width: 500px;">${r.recipe}</td>
                 <td class="text-truncate" style="max-width: 250px;">${r.procedure}</td>
                 <td>
                   <button class="btn primary-cta btn-sm view-btn" 
