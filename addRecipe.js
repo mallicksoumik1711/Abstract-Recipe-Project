@@ -1,3 +1,21 @@
+async function showLatestId(){
+    try{
+        let data = await fetch("http://localhost:3000/recipes");
+        let recipeData = await data.json();
+
+        if(recipeData.length > 0){
+            let latestId = recipeData[recipeData.length-1].id;
+            document.getElementById("latest-id").innerText = latestId;
+        }
+        else{
+            document.getElementById("latest-id").innerText = "No Recipes yet.";
+        }
+    }
+    catch(e){
+        console.log(e);
+    }
+}
+
 async function addRecipe() {
     let form = document.getElementById("form");
 
@@ -41,4 +59,5 @@ async function addRecipe() {
     });
 }
 
+showLatestId();
 addRecipe();

@@ -3,7 +3,7 @@ async function showRecipes() {
     let res = await fetch("http://localhost:3000/recipes");
     let recipes = await res.json();
 
-    //  "View" button in table
+    
   
 let tableHTML = `
   <div class="card shadow-sm rounded-4 overflow-hidden">
