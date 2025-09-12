@@ -1,13 +1,22 @@
-let showBtn = document.getElementById("show-all-recipes");
-let addBtn = document.getElementById("add-new-recipe");
+const showBtn = document.getElementById("show-all-recipes");
+const addBtn = document.getElementById("add-new-recipe");
 
-showBtn.addEventListener('click', showData);
-addBtn.addEventListener('click', addData);
-
-async function showData() {
+if (showBtn) {
+  showBtn.addEventListener("click", () => {
+    if (showBtn.disabled) return;
+    showBtn.disabled = true;
+    showBtn.dataset.orig = showBtn.innerHTML;
+    showBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...`;
+    // setTimeout(() => {
+    //   window.location.href = "recipes.html";
+    // }, 3000);
     window.location.href = "recipes.html";
+  });
 }
 
-async function addData(){
-    window.location.href = "addRecipe.html";
+if (addBtn) {
+  addBtn.addEventListener("click", () => {
+    const el = document.getElementById("addRecipeModal");
+    new bootstrap.Modal(el, { backdrop: false }).show();
+  });
 }

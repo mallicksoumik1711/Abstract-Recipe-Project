@@ -42,13 +42,8 @@
     },
     {
       "id": "9",
-      "recipe": "Stuffed Bell Peppers",
-      "procedure": "Preheat oven to 375°F (190°C). Cut tops off bell peppers and remove seeds. "
-    },
-    {
-      "id": "10",
-      "recipe": "Banana Smoothie Bowl",
-      "procedure": "Blend frozen bananas with a splash of milk until smooth."
+      "recipe": "any food",
+      "procedure": "some steps"
     }
   ]
 }
